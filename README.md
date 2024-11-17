@@ -14,7 +14,7 @@ Follow these steps to set up the app locally:
 
 ### Prerequisites
 - Node.js and npm installed on your machine.
-- Basic understanding of React (if applicable).
+- Basic understanding of React.
 
 ### Installation
    1. Clone the repository:
