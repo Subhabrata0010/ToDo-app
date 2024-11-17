@@ -27,6 +27,9 @@ Follow these steps to set up the app locally:
    3. Install dependencies:
       ```bash
       npm install
+   4. Run file:
+      ```bash
+      npm run dev
  
 ### Folder Structure 📂
 - **src/**: Contains the core application code.
