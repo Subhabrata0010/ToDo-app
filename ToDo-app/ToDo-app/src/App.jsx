@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Input from "./components/Input";
 import ToDo from "./components/ToDo";
+import TimeApp from "./components/TimeApp";
 
 function App() {
   const[task,setTask]=useState('')
@@ -26,11 +27,10 @@ function App() {
     )  
   }
 
-  console.log(todos)
-
   return (
     <>
       <h1>To Do App</h1>
+      <TimeApp/>
       <Input task={task} writetodo={writetodo} addtodo={addtodo}/>
       <br />
       <ToDo todos={todos} delTodo={delTodo}/>
