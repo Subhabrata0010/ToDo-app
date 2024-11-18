@@ -24,7 +24,7 @@ function TimeApp() {
 
   return (
     <div className="dateTime">
-      <p>{date ? date : "Loading..."}     {time ? time : "Loading..."}</p>
+      <p>{date ? date : "Loading..."}  <br />  {time ? time : "Loading..."}</p>
     </div>
   );
 };

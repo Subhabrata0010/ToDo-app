@@ -1,4 +1,16 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
 body{
+  overflow-x: hidden;
   text-align: center;
   background-color: rgb(12, 197, 135);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -8,6 +20,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .inputTask > input{
@@ -17,6 +30,8 @@ body{
   font-size: 15px;
   margin-bottom: 10px;
   border-radius: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .inputTask > button{
@@ -46,26 +61,94 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: left;
   padding-left: 15px;
+  padding-right: 15px;
   border-radius: 15px;
   margin-bottom: 15px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.todo > p{
+  width: 400px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.action {
+  display: flex; /* Flex container for horizontal alignment */
+  justify-content: space-between; /* Push elements to edges */
+  align-items: center; /* Vertically center items */
+  width: 100%; /* Ensure it spans the full width */
 }
 
 .action > button{
   background-color: rgb(248, 98, 98);
-  margin-left: 300px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-weight: 600;
   width: 70px;
   height: 30px;
   border-radius: 10px;
+  align-self: flex-end;
 }
 
 .action > input{
   height: 18px;
   width: 18px;
+  align-self: flex-start;
+  margin-right: auto;
 }
 
 .dateTime > p{
   font-weight: 500;
   font-size: 20px;
 }
+
+@media (max-width: 450px) {
+  .root {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .inputTask > input {
+    width: 100%; /* Adjust input to fit smaller screens */
+    font-size: 14px;
+  }
+
+  .inputTask > button {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+  }
+
+  .todo {
+    width: 100%; /* Full width of the screen */
+    font-size: 14px;
+    padding: 10px; /* Reduce padding for small screens */
+  }
+
+  .todo > p {
+    width: 100%; /* Ensure text doesn't overflow */
+  }
+
+  .action > button {
+    margin-left: auto; /* Align button dynamically */
+    margin-right: 10px; /* Add right margin */
+  }
+
+  .action > input {
+    height: 16px;
+    width: 16px;
+  }
+
+  .dateTime > p {
+    font-size: 16px;
+  }
+}
+
