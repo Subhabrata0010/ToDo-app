@@ -32,6 +32,7 @@ body{
   border-radius: 5px;
   flex-wrap: wrap;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .inputTask > button{
@@ -82,10 +83,10 @@ body{
 }
 
 .action {
-  display: flex; /* Flex container for horizontal alignment */
-  justify-content: space-between; /* Push elements to edges */
-  align-items: center; /* Vertically center items */
-  width: 100%; /* Ensure it spans the full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
 }
 
 .action > button{
@@ -117,7 +118,7 @@ body{
   }
 
   .inputTask > input {
-    width: 100%; /* Adjust input to fit smaller screens */
+    width: 300px;
     font-size: 14px;
   }
 
@@ -128,18 +129,18 @@ body{
   }
 
   .todo {
-    width: 100%; /* Full width of the screen */
+    width: 100%;
     font-size: 14px;
-    padding: 10px; /* Reduce padding for small screens */
+    padding: 10px;
   }
 
   .todo > p {
-    width: 100%; /* Ensure text doesn't overflow */
+    width: 100%;
   }
 
   .action > button {
-    margin-left: auto; /* Align button dynamically */
-    margin-right: 10px; /* Add right margin */
+    margin-left: auto;
+    margin-right: 10px;
   }
 
   .action > input {
