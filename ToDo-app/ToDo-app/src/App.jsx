@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-      <h1>To Do App</h1>
+      <h1>To Do Application</h1>
       <TimeApp/>
       <Input task={task} writetodo={writetodo} addtodo={addtodo}/>
       <br />
