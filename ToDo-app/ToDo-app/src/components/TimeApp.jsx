@@ -3,7 +3,6 @@ import Clock from "./Clock";
 
 function TimeApp() {
   const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
   const [dayOfWeek, setDayOfWeek] = useState("");
 
   const fetchTime = async () => {
@@ -11,7 +10,6 @@ function TimeApp() {
       const response = await fetch("https://timeapi.io/api/time/current/zone?timeZone=Asia%2FKolkata");
       const data = await response.json();
       setDate(data.date);
-      setTime(data.time);
       setDayOfWeek(data.dayOfWeek)
     } catch (error) {
       console.error("Error fetching time:", error);
@@ -20,7 +18,7 @@ function TimeApp() {
 
   useEffect(() => {
     fetchTime(); 
-    const interval = setInterval(fetchTime, 1000);
+    const interval = setInterval(fetchTime, 180000);
     return () => clearInterval(interval); 
   }, []);
 
