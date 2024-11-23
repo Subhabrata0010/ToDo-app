@@ -20,11 +20,13 @@ function App() {
   }
 
   function delTodo(todoIndex) {
-    setTodos((prevTodos) =>
-      prevTodos.filter((prevTodos, prevTodosIndex) => {
-        return prevTodosIndex != todoIndex;
-      })
-    );
+    if (window.confirm("Are you sure you want to delete this task?")) {
+      setTodos((prevTodos) =>
+        prevTodos.filter((prevTodos, prevTodosIndex) => {
+          return prevTodosIndex != todoIndex;
+        })
+      );
+    }
   }
 
   return (
