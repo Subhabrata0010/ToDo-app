@@ -14,6 +14,7 @@ function Todo_single({ todo, index, delTodo }) {
           style={{
             textDecoration: isCompleted ? "line-through" : "none",
             color: isCompleted ? "gray" : "black",
+            transition: "all 0.3s ease",
           }}
         >
           {todo}
