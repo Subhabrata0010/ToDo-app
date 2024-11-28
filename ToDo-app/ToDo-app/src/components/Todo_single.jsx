@@ -29,4 +29,3 @@ function Todo_single({ todo, index, delTodo }) {
 }
 
 export default Todo_single;
-
