@@ -32,9 +32,9 @@ Follow these steps to set up the app locally:
       npm run dev
  
 ### Folder Structure 📂
-- **src/**: Contains the core application code.
-  - **components/**: Reusable React components.
-  - **styles/**: CSS files for styling.
+- **/src**: Contains the core application code.
+  - **/components**: Reusable React components.
+  - **/styles**: CSS files for styling.
 ### Future Enhancements 🚀
 - Add a due date for tasks.
 - Implement drag-and-drop for task reordering.
