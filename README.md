@@ -1,6 +1,6 @@
 # ToDo App 📝
 
-A simple and user-friendly **ToDo Application** built with [React/JavaScript] to help manage your daily tasks efficiently. 🚀
+A simple and user-friendly **ToDo Application** built with [React] to help manage your daily tasks efficiently. 🚀
 
 ## Features ✨
 - Add new tasks easily.
