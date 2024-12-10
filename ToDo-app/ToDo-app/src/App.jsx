@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Input from "./components/Input";
 import ToDo from "./components/ToDo";
 import TimeApp from "./components/TimeApp";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [task, setTask] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(()=>{
+    const savedTodos = localStorage.getItem("todos");
+    return savedTodos ? JSON.parse(savedTodos) : [];
+  });
+
+  useEffect(()=>{
+    localStorage.setItem("todos", JSON.stringify(todos));
+  },[todos]);
 
   function writetodo(e) {
     setTask(e.target.value);
@@ -18,6 +26,8 @@ function App() {
       setTask("");
     }
   }
+
+  
 
   function delTodo(todoIndex) {
     if (window.confirm("Are you sure you want to delete this task?")) {
@@ -37,6 +47,7 @@ function App() {
         <Input task={task} writetodo={writetodo} addtodo={addtodo} />
         <br />
         <ToDo todos={todos} delTodo={delTodo} />
+        <Analytics/>
       </div>
     </>
   );

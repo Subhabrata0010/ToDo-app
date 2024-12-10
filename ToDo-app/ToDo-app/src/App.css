@@ -23,6 +23,16 @@ body{
   flex-wrap: wrap;
 }
 
+.inputTask > label {
+  margin-top: 1rem; 
+  align-self: flex-start;
+  padding-left: 5%;
+  font-size: 1rem;
+  line-height: 1.5rem; 
+  font-weight: 600;
+  font-family: monospace;
+}
+
 .inputTask > textarea{
   flex-wrap: wrap;
   justify-content: center;
@@ -36,17 +46,37 @@ body{
   padding: 10px;
   border-radius: 10px;
   scrollbar-width: none;
+  margin-bottom: 10px;
 }
 
-.inputTask > button{
-  height: 60px;
-  width: 60px;
-  font-size: 35px;
-  margin-top: 15px;
-  background-color: #4CAF50;
-  font-weight: 700;
-  border-radius: 30px;
+.inputTask > button {
+  --bg: #000;
+  --hover-bg: #4CAF50;
+  --hover-text: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 10px;
+  padding: 0.8em 1.25em;
+  background: var(--bg);
+  transition: 0.2s;
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.inputTask > button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.inputTask > button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
 
 .container{
   margin-top: 20px;
